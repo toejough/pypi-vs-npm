@@ -2,6 +2,8 @@
 
 This is a comparison of packaging with python vs with npm.
 
+It was partially inspired by [this post](http://blog.ionelmc.ro/2015/02/24/the-problem-with-packaging-in-python/), and partially by my own frustrated experiences trying to package something properly.
+
 # TLDR
 Python packaging is 3x as complex as javascript packaging.  See the [conclusion](#conclusion) for more detail (but less than the whole document).
 
