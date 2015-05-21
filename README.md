@@ -321,7 +321,7 @@ Now go to https://pypi.python.org/pypi?%3Aaction=submit_form
 
 To get there, you need to fill in your user credentials.  The easiest way to init your package is to upload your PKG-INFO file, rather than filling out the form manually.
 
-It has been mentioned to me that you can use `python setup.py register` to perform this step more simply (and without going to the web-form).  This is a "bad idea".  See my earlier comments in [user setup](user-setup).
+It has been mentioned to me that you can use `python setup.py register` to perform this step more simply (and without going to the web-form).  This is a "bad idea".  See my earlier comments in [user setup](#user-setup).
 
 ```
 > twine upload dist/*
@@ -390,7 +390,8 @@ Again, NPM by a clear margin.  Python makes you run a bunch of commands with spe
 
 NPM just asks you to repeat the same short one-liner, and automatically does the right thing.
 
-# file system cruft <a name='file system cruft' />
+<a name='file-system-cruft' />
+# file system cruft
 ## Python
 
 Python builds four build-centric directories that you need to ignore:
