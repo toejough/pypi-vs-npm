@@ -3,19 +3,19 @@
 This is a comparison of packaging with python vs with npm.
 
 # TLDR
-Python packaging is 3x as complex as javascript packaging.  See the [conclusion](#conclusion) for more detail (but less than the whole document).
+Python packaging is 3x as complex as javascript packaging.  See the [conclusion](conclusion) for more detail (but less than the whole document).
 
 # Categories examined:
-* [script creation](#script-creation)
-* [conversion to a package](conversion to a package)
-* [user setup](user setup)
-* [first upload](first upload)
+* [script creation](script-creation)
+* [conversion to a package](conversion-to-a-package)
+* [user setup](user-setup)
+* [first upload](first-upload)
 * [versioning](versioning)
-* [subsequent uploads](subsequent uploads)
-* [file system cruft](file system cruft)
+* [subsequent uploads](subsequent-uploads)
+* [file system cruft](file-system-cruft)
 
-
-# Create your script <a name='script-creation' />
+<a name='script-creation' />
+# Create your script
 First, let's create a simple script that you can just run locally.
 
 ## python
@@ -37,7 +37,8 @@ hello world
 ## comparison
 Tie.  The complexity of creating a simple script is about the same for both languages.  Pretty simple.  So far, so good.
 
-# Convert to package <a name='conversion to a package' />
+<a name='conversion-to-a-package' />
+# Convert to package
 Next, we decided this is an insanely useful script that we should share with the world.  Let's package it up so we can ship it!
 
 For this example, I will assume that you are also sharing this thing on github, and that you've set up your repo for each language separately.
@@ -262,7 +263,8 @@ Pypi, on the other hand:
 
 The real advantage for NPM is the auto-discovery and setting of good defaults for the boilerplate, and an interactive dialog to set most of the rest.
 
-# Create your user <a name='user setup' />
+<a name='user-setup' />
+# Create your user
 
 ## python
 
@@ -298,7 +300,8 @@ NPM wins.  Again, they walk you through prompts, then generate the a file that m
 
 Python's webform is not complex or difficult to use, but it does require you to leave the CLI, and does not build or set any config file to help you use the package index in the future.
 
-# First upload <a name='first upload' />
+<a name='first-upload' />
+# First upload
 ## python
 ```
 > pip install twine
@@ -318,7 +321,7 @@ Now go to https://pypi.python.org/pypi?%3Aaction=submit_form
 
 To get there, you need to fill in your user credentials.  The easiest way to init your package is to upload your PKG-INFO file, rather than filling out the form manually.
 
-It has been mentioned to me that you can use `python setup.py register` to perform this step more simply (and without going to the web-form).  This is a "bad idea".  See my earlier comments in [user setup](user setup).
+It has been mentioned to me that you can use `python setup.py register` to perform this step more simply (and without going to the web-form).  This is a "bad idea".  See my earlier comments in [user setup](user-setup).
 
 ```
 > twine upload dist/*
@@ -351,7 +354,8 @@ By contrast, python has you:
 * finally, re-enter your user credentials
 
 # Subsequent uploads
-## Updating your version <a name='versioning' />
+<a name='versioning' />
+## Updating your version
 ### Python
 Edit `setup.py` to set the new version.
 
@@ -364,7 +368,8 @@ Edit `setup.py` to set the new version.
 ### comparison
 NPM again.  Python goes the manual route, NPM goes the automated route, and throws in a helpful commit.
 
-## Uploading your package <a name='subsequent uploads' />
+<a name='subsequent-uploads' />
+## Uploading your package
 ### python
 
 ```
@@ -401,7 +406,8 @@ NPM doesn't add any directories
 ## comparison
 NPM is the clear winner, with no filesystem clutter.
 
-# Conclusion <a name="conclusion"></a>
+<a name="conclusion"></a>
+# Conclusion
 Python is very manual and boiler-platey.  NPM is quite a bit more automated, and wins in every comparison after the initial script creation (which it tied for).
 
 The whole procedure can be summarized with some stats:
