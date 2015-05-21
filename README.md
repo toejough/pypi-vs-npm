@@ -261,9 +261,27 @@ Pypi, on the other hand:
 
 The real advantage for NPM is the auto-discovery and setting of good defaults for the boilerplate, and an interactive dialog to set most of the rest.
 
-# Create your user <a name='user setup />
+# Create your user <a name='user setup' />
+
 ## python
+
 go to https://pypi.python.org/pypi?%3Aaction=register_form and fill in the fields (4, at the time of this writing)
+
+It has been mentioned to me that you can use `python setup.py register` to perform this step in conjunction with registering your project, and that this way you can skip the web-form.  This is not-explicitly-enough warned against in the [official docs](https://packaging.python.org/en/latest/distributing.html#create-an-account):
+
+> First, you need a PyPI user account. There are two options:
+>
+> 1. Create an account manually using the form on the PyPI website.
+> 1. Have an account created as part of registering your first project (see option #2 below).
+
+Where 'below' is the registration section:
+> ...you need to register your project. There are two ways to do this:
+>
+> 1. (Recommended): Use the form on the PyPI website. Although the form is cumbersome, it’s a secure option over using #2 below, which passes your credentials over plaintext.
+> 1. Run python setup.py register. If you don’t have a user account already, a wizard will create one for you.
+
+The relevant bit there is not nearly explicit enough, so I'll repeate it here with emPHAsis:  **#2 ... passes your credentials over plaintext**
+
 
 ## javascript
 ```
@@ -298,6 +316,8 @@ Python's webform is not complex or difficult to use, but it does require you to 
 Now go to https://pypi.python.org/pypi?%3Aaction=submit_form
 
 To get there, you need to fill in your user credentials.  The easiest way to init your package is to upload your PKG-INFO file, rather than filling out the form manually.
+
+It has been mentioned to me that you can use `python setup.py register` to perform this step more simply (and without going to the web-form).  This is a "bad idea".  See my earlier comments in [user setup](user setup).
 
 ```
 > twine upload dist/*
