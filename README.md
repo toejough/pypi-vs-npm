@@ -280,7 +280,7 @@ Where 'below' is the registration section:
 > 1. (Recommended): Use the form on the PyPI website. Although the form is cumbersome, it’s a secure option over using #2 below, which passes your credentials over plaintext.
 > 1. Run python setup.py register. If you don’t have a user account already, a wizard will create one for you.
 
-The relevant bit there is not nearly explicit enough, so I'll repeate it here with emPHAsis:  **#2 ... passes your credentials over plaintext**
+The relevant bit there is not nearly explicit enough, so I'll repeat it here with emPHAsis:  **#2 ... passes your credentials over plaintext**
 
 
 ## javascript
