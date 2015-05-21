@@ -14,7 +14,7 @@ Python packaging is 3x as complex as javascript packaging.  See the [conclusion]
 * [subsequent uploads](subsequent uploads)
 * [file system cruft](file system cruft)
 
-# Create your script <a name='script creation' />
+# Create your script <a name='script creation'></a>
 First, let's create a simple script that you can just run locally.
 
 ## python
