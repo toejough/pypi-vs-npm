@@ -3,16 +3,16 @@
 This is a comparison of packaging with python vs with npm.
 
 # TLDR
-Python packaging is 3x as complex as javascript packaging.  See the [conclusion](conclusion) for more detail (but less than the whole document).
+Python packaging is 3x as complex as javascript packaging.  See the [conclusion](#conclusion) for more detail (but less than the whole document).
 
 # Categories examined:
-* [script creation](script-creation)
-* [conversion to a package](conversion-to-a-package)
-* [user setup](user-setup)
-* [first upload](first-upload)
-* [versioning](versioning)
-* [subsequent uploads](subsequent-uploads)
-* [file system cruft](file-system-cruft)
+* [script creation](#script-creation)
+* [conversion to a package](#conversion-to-a-package)
+* [user setup](#user-setup)
+* [first upload](#first-upload)
+* [versioning](#versioning)
+* [subsequent uploads](#subsequent-uploads)
+* [file system cruft](#file-system-cruft)
 
 <a name='script-creation' />
 # Create your script
