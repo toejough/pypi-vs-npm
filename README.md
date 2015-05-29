@@ -56,7 +56,7 @@ Let's just do the things first, then I'll explain it after each section.  From y
 * setup.py is the file python uses to track most package information.
 * README.rst is the README.  It's not strictly necessary, but it's good practice to provide this.  Pypi only renders ReStructuredText, so if you want to have a nice-looking README on pypi, this is the format to use.
 * hello_world is the directory your actual package files for a "hello_world" package need to be in.
-* __init__.py is the main package file.  If you don't have this, you don't have a package.
+* \__init__.py is the main package file.  If you don't have this, you don't have a package.
 
 You need to fill in `setup.py` by hand.  Edit it to look like this:
 ```python
