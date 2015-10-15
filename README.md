@@ -114,7 +114,7 @@ setup(
         'console_scripts': [
             # <name>=<package>:<function>
             # when the user calls 'hello_world' on the cli, 'hello_world/__init__.py::_cli()" will be called.
-            'hello_world=hello_world:_cli',
+            'hello_world=__init__:_cli',
         ],
     }
 )
@@ -122,7 +122,7 @@ setup(
 edit `hello_world/__init__.py` to look like this:
 ```python
 def _cli():
-  print('hello world')
+    import hello_world
 ```
 This puts the code you want to run into a function that can be called from the executable script which setup.py will install for you.
 
